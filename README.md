@@ -4,6 +4,12 @@ Master Thesis code repository.
 Title: Emergent Symbiotic Speciation: Growing Holobionts with Cooperative Coevolution
 Author: Ivo Steegstra
 
+Abstract:
+In nature, organisms larger than a microbe typically comprise organisms of multiple species. Species speciate, combine and co-evolve to perform different functional roles in an ecosystem. This thesis applies this biological framework to the field of computational evolution. We introduce a model featuring several novel mechanisms applied to the framework of cooperative coevolution, and it is shown that the model is capable of producing a composite solution of multiple emergent symbiotic species from a single gene pool, without prior configuration of the composition.
+Speciation within a single gene pool is achieved through a novel assortative mating strategy. Emergent species are identified with unsupervised clustering, and solution compositions are formed by determining species type combinations with a genetic algorithm, thereby also facilitating meaningful coevolution. Finally a novel credit assignment strategy ensures survival of efficient altruism.
+The model is evaluated with the behavioural dynamics produced by three distinct domain models: a predator-prey simulation, function optimization, and a novel 'Toxin' model designed to showcase the game theory dynamics inherent to the model.
+Results show that dynamic emergent symbiotic speciation is achieved and produces good composite solutions. Species are not shown to be optimally decomposed subcomponents of the problem.
+
 Note that this repository is the codebase of scientific research custom built for personal use.
 It is made public in the spirit of open science and transparency.
 The codebase is not intended for general use and is not maintained for that purpose.
