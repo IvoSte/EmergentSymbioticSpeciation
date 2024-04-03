@@ -10,6 +10,8 @@ The codebase is not intended for general use and is not maintained for that purp
 This repository is a slightly altered cleaned up version of the original codebase, with some parts adjusted for usability.
 However, you will still find plenty of comments to the programmer, commented out or redundant code, as is the nature of development code.
 
+A large set of experiments, including the ones presented in the thesis, can be found in the ~/experiments/experiments directory.
+
 ## How to install the codebase
 
 First, install python 3.11.2. Then, install the required packages by running the following command:
@@ -42,7 +44,7 @@ python main.py
 
 Performing a costum experiment with the speciation architecture can be done in two steps.
 
-1. Create the experiment.
+### 1. Create the experiment.
 Create a new experiment configuration in the experiments directory. This this can be done most easily by generating an experiment set using the experiment generator, which can be found in the /experiments directory under the name 'experiment_generator.py'. In that python file in the main() function, configure the parameters to be changed for the experiment. See the documentation in that file for detailed instructions. The script uses a base config file as template, these can be found in the ~/experiments/experiments/_model_name_/base_configs, and which is used can be changed in the experiment_generator script. The experiment generator will create a new experiment set with a configuration file for each experiment. The experiment generator will create an experiment folder with the configurations in experiments/experiments/_model_name_/_experiment_name_. Here you will also find the results of the experiment after running.
 
 After configuring, the experiment generator can be run with the following command:
@@ -51,7 +53,7 @@ After configuring, the experiment generator can be run with the following comman
 python experiment_generator.py
 ```
 
-2. Run the experiment.
+### 2. Run the experiment.
 Specific experiment running parameters can be changed in ~/config/experiment_runner_config.toml. Here you will find various output options.
 Running the experiment is done with experiment_runner.py. This script will run the generated experiment set and can be run with the following command:
 
@@ -63,14 +65,14 @@ where <model_name> is the name of the model to run ['predator_prey', 'toxin', 'f
 
 The experiment runner can be configured with the following commandline arguments:
     
-    ```bash
-    -m, --model_name: The name of the model to run the experiment on.
-    -e, --experiment-set-name: The name of the experiment to run.
-    -o, --overwrite-existing-reports: If the experiment already exists, overwrite earlier results.
-    -r, --run-existing-experiments-again: If the experiment already exists, run the experiment again.
-    -mp, --multi-processing: Use multi-processing to run the experiments in parrallel.
-    -cpu, --max-num-cpus: The maximum number of CPUs to use. If not specified, all available CPUs will be used if multiprocessing is enabled.
-    ```
+```bash
+-m, --model_name: The name of the model to run the experiment on.
+-e, --experiment-set-name: The name of the experiment to run.
+-o, --overwrite-existing-reports: If the experiment already exists, overwrite earlier results.
+-r, --run-existing-experiments-again: If the experiment already exists, run the experiment again.
+-mp, --multi-processing: Use multi-processing to run the experiments in parrallel.
+-cpu, --max-num-cpus: The maximum number of CPUs to use. If not specified, all available CPUs will be used if multiprocessing is enabled.
+```
 
 E.G. to run the experiment set 'toxin_experiment_1' on the model 'toxin' with multi-processing on 4 cpus, use the following command:
 
@@ -83,5 +85,5 @@ To reiterate, the results can be found in the generated experiment folder in exp
 To run several experiments, the 'run_several_experiments.sh' in ~/experiments can be used. Simply add the experiment_runner run commands to the file and run the file with the following command:
 
 ```bash
-bash run_several_experiments.sh
+run_several_experiments.sh
 ```
