@@ -1,0 +1,3 @@
+EXPERIMENT: experiments\predator_prey\parameter_testing_species_detection_tracking_fine
+DATE CREATED: 2023-10-13 12:27:13.984050
+NOTE: PP parameter testing - species detection tracking_fine

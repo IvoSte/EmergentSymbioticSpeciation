@@ -1,0 +1,29 @@
+# Runner
+N_RUNS = 10
+N_GENERATIONS = 100
+
+# Model
+MAX_STEPS = 1
+N_AGENTS = 500
+N_TOXINS = 1
+
+# Agent
+TOXIN_CLEANUP_RATE = 1
+GENE_COST = 30
+GENE_COST_MULTIPLIER = 1.0 # cost reduction for each extra gene, decreases cost if > 1, else increases cost
+
+# Environment
+TOXIN_BASE = 100
+
+# Evolution
+REPRODUCE_FRACTION = 0.5
+CULL_FRACTION = 0.01
+MUTATION_PROBABILITY = 0.1
+MUTATION_RANGE = 0.1
+SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "tournament", "rank"
+
+COLLECTIVE_FITNESS_WEIGHT = 0.001
+
+MATE_SELECTION_TYPE = "random" #Possible values: "random", "fitness_proportional", "nearest_neighbour", "approx_nearest_neighbour"
+MATE_SELECTION_SAMPLE_SIZE = 0 # Number of individuals to sample from when selecting a mate. Usefull if MATE_SELECTION_TYPE is "nearest_neighbour_from_sample", to limit approx nearest neighbour search time.
+ALLOW_SELF_MATING = true       # Allow an individual to mate with itself. This is useful if you want to allow for mutation only.

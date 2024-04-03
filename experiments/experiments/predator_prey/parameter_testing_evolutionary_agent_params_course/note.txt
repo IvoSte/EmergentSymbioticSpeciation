@@ -1,0 +1,6 @@
+EXPERIMENT: experiments\predator_prey\parameter_testing_evolutionary_agent_params_course
+DATE CREATED: 2023-10-10 16:41:28.391059
+NOTE: PP parameter testing - evolutionary agent parameters course sweep
+DATE EXECUTED: 2023-10-11 10:20:09.407163
+EXECUTION TIME: 1.0 hour(s) 30.0 minute(s) 34.47 second(s).
+MODEL GIT VERSION: 8be36cecfd84eef538c00486d85e7fbbb21797e2

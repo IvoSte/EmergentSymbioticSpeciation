@@ -1,0 +1,12 @@
+EXPERIMENT: experiments\toxin\hyp_3_exp_10a
+DATE CREATED: 2024-02-28 12:41:34.904848
+NOTE: 
+        Objective: Test if the found composition is optimal.
+        Result: Metric of solvedness (toxin level), toxin redundancy, distribution of functions.
+        Variables: Cost multiplier, evolution types
+        Note: Copy of h3e3a, making sure function cost is minimized if collective fitness is set to average fitness.
+        a:es_nn
+        
+DATE EXECUTED: 2024-02-28 12:57:34.753801
+EXECUTION TIME: 0.0 hour(s) 6.0 minute(s) 7.75 second(s).
+MODEL GIT VERSION: 7d02fa046797a9491c79af5257c04211a5fbbff2

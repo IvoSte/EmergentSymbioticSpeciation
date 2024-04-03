@@ -1,0 +1,13 @@
+EXPERIMENT: experiments\toxin\hyp_4_exp_5a
+DATE CREATED: 2023-12-01 11:11:18.627611
+NOTE: 
+        Objective: Can a bqh effect be induced?
+        Result: |species per composition, species per generation, species representation|, |Toxin Concentration|
+        Variables: Sampling (evolutionary vs random), fitness scaling (t,f), cf type average
+        Note: These are the first 'core results' showed to Grossi. Very short, deterministic, clear results that exhibit the game theory dynamics.
+                Attempt 5 with many generations and many runs, for good averaging.
+        a:es_nn, b:rs_fp
+        
+DATE EXECUTED: 2023-12-04 16:18:29.062076
+EXECUTION TIME: 0.0 hour(s) 14.0 minute(s) 26.9 second(s).
+MODEL GIT VERSION: b5dd635449d4b52f519bc6ca84e21e61f681192a

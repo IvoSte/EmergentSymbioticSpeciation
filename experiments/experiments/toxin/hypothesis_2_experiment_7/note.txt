@@ -1,0 +1,12 @@
+EXPERIMENT: experiments\toxin\hypothesis_2_experiment_7
+DATE CREATED: 2023-11-08 12:45:28.076008
+NOTE: 
+        Test if individuals form a complete solution, where each species serves as a subcomponent.
+        Show toxin levels, gene redundancy, and species composition.
+        Experiment with fitness scaling and alignment.
+        Higher toxin cost so there should be some movement from initialization.
+        Compare different collective fitness types. New fitness type: remainder_and_average.
+        
+DATE EXECUTED: 2023-11-08 12:47:48.793196
+EXECUTION TIME: 0.0 hour(s) 2.0 minute(s) 3.84 second(s).
+MODEL GIT VERSION: 2679acd4fb0551960c63d35dfda02ac5d66c1ea3

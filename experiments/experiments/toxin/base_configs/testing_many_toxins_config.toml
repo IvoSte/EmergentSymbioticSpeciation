@@ -1,0 +1,88 @@
+# Model name, for the experiment runner
+MODEL = "toxin"
+
+# Runner
+N_RUNS = 1
+N_GENERATIONS = 200
+N_COMPOSITIONS = 30    # number of compositions 
+RUNS_PER_SET = 1       # Keep this at 1 for toxin model, the model is deterministic
+RUN_BENCHMARK = false  # Model is deterministic, so it does not need a benchmark
+BENCHMARK_INTERVAL = 0
+
+# Model
+MAX_STEPS = 1
+N_AGENTS = 30
+N_TOXINS = 10
+
+# Agent
+TOXIN_CLEANUP_RATE = 1
+GENE_COST = 3.0
+GENE_COST_MULTIPLIER = 1.0 # cost reduction for each extra gene, decreases cost if > 1, else increases cost
+
+# Environment
+TOXIN_BASE = 10
+
+# Chromosome
+N_SUBPOPULATIONS = 1
+SUBPOPULATION_SIZE = 200
+CHROMOSOME_LENGTH = 10               # Number of genes per agent, needs to be equal to N_TOXINS
+CHROMOSOME_SAMPLING = "evolutionary" # Possible values: "uniform", "deterministic", "simple_random", "evolutionary". Determines how chromosomes are sampled for new parameter sets. Deterministic should be used if there are fixed number of species and their sizes remain the same.
+SAVE_CHROMOSOMES = false
+
+# Model Dev
+RUN_WITH_VIEWER = false            # Toxin model doesn't have a viewer
+MULTITHREADING = false
+VISUALIZE_CHROMOSOMES = false
+VISUALIZE_CHROMOSOMES_INTERVAL = 5
+
+# Evolution
+COLLECTIVE_FITNESS_WEIGHT = 0.0
+COLLECTIVE_FITNESS_TYPE = "average"       # total, average, toxin_remainder". Also the fitness for a composition
+INDIVIDUAL_FITNESS_TYPE = "default"
+SCALE_FITNESS_WITH_REPRESENTATION = true
+ALIGN_COMPOSITIONS_WITH_POPULATION = true
+
+EVOLUTION_TYPE = "emergent_subpopulations" #Possible values: "forced_subpopulations", "emergent_subpopulations", "emergent_subpopulations"
+
+DETECT_SPECIES_METHOD = "binary"                #Possible values: "dbscan", "kmeans", "optics"
+DETECT_SPECIES_WITH_PREVIOUS_GENERATION = false
+DETECT_SPECIES_INTERVAL = 5                     # KMeans requires a value for K. We can determine this value by calculating the best fit for K. We don't want to do this each generation.
+DETECT_SPECIES_DELTA_RANGE = 1                  # Detecting the value for K needs a range. This is how many we detect around the previously used K.
+DETECT_SPECIES_EPS = 0.25                       # DBSCAN and OPTICS require a value for epsilon. 
+DETECT_SPECIES_MIN_SAMPLES = 1                  # DBSCAN and OPTICS require a value for min_samples.
+
+SPECIES_TRACKING = false
+SPECIES_TRACKING_SEARCH_DEPTH = 1
+SPECIES_TRACKING_DISTANCE_THRESHOLD = 0.5
+SPECIES_TRACKING_PROTOTYPE_METHOD = "centroid" # Possible values: "centroid", unimplemented: "mediod", "density_peak"
+
+[AGENT]
+REPRODUCE_FRACTION = 0.5
+CULL_FRACTION = 0.5
+MUTATION_PROBABILITY = 0.1
+MUTATION_RANGE = 0.1
+SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "tournament", "rank"
+
+MATE_SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "nearest_neighbour", "approx_nearest_neighbour"
+MATE_SELECTION_SAMPLE_SIZE = 50              # Number of individuals to sample from when selecting a mate. Usefull if MATE_SELECTION_TYPE is "nearest_neighbour_from_sample", to limit approx nearest neighbour search time.
+ALLOW_SELF_MATING = true                     # Allow an individual to mate with itself. This is useful if you want to allow for mutation only.
+
+GENE_DATA_TYPE = "binary" # possible values: "binary", "nominal", "continuous"
+
+KNOCKOUT_MUTATION = false
+KNOCKOUT_MUTATION_PROBABILITY = 0.0
+INITIAL_GENE_KNOCKOUT = 0           # Number of genes to knock out initially. For a random value per gene set to chromosome length. Only used if KNOCKOUT_MUTATION is true.
+
+[COMPOSITION]
+REPRODUCE_FRACTION = 0.5
+CULL_FRACTION = 1.0                     # Needs to be 1.0, as the set of allowed genes changes each generation. (different species)
+MUTATION_PROBABILITY = 0.03
+MUTATION_RANGE = 0.1
+SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "tournament", "rank"
+
+CHROMOSOME_RESIZING = false           # Allow the number of chromosomes in the composition to change. Can only be applied for composition if there are variable number of slots.
+CHROMOSOME_RESIZING_PROBABILITY = 0.1 # Probability of resizing a chromosome. Only applied if CHROMOSOME_RESIZING is true.
+
+MATE_SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "nearest_neighbour", "approx_nearest_neighbour"
+MATE_SELECTION_SAMPLE_SIZE = 15              # Number of individuals to sample from when selecting a mate. Usefull if MATE_SELECTION_TYPE is "nearest_neighbour_from_sample", to limit approx nearest neighbour search time.
+ALLOW_SELF_MATING = true                     # Allow an individual to mate with itself. This is useful if you want to allow for mutation only.

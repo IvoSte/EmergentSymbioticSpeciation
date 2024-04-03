@@ -1,0 +1,6 @@
+EXPERIMENT: experiments/toxin/many_toxins_9
+DATE CREATED: 2023-10-23 13:00:24.414877
+NOTE: Many toxins test -- Idea is to see population dynamics with more intricate chromosomes, and so see if nn mate selection has more effect. Also, test the effect of the gene cost multiplier, to see some effect on population distributions.
+DATE EXECUTED: 2023-10-23 11:11:01.492339
+EXECUTION TIME: 0.0 hour(s) 2.0 minute(s) 3.27 second(s).
+MODEL GIT VERSION: a37a941449fb121722f19872af26a75e54e9cf65

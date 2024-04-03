@@ -1,0 +1,10 @@
+EXPERIMENT: experiments\predator_prey\hypothesis_2_experiment_2
+DATE CREATED: 2023-11-07 14:43:37.393052
+NOTE: 
+        Test if individuals form a complete solution, where each species serves as a subcomponent.
+        Show fitness of species, benchmark values.
+        Normal run with extiction event.
+        
+DATE EXECUTED: 2023-11-07 15:55:54.155998
+EXECUTION TIME: 1.0 hour(s) 11.0 minute(s) 57.02 second(s).
+MODEL GIT VERSION: 54687db5ff035c6f4390f08870fdad0f01d23f5d

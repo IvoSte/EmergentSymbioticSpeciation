@@ -1,0 +1,11 @@
+EXPERIMENT: experiments/function_optimization/hyp_3_exp_9a
+DATE CREATED: 2024-02-28 11:53:10.054985
+NOTE: 
+        Objective: Test if individuals form a complete solution, and if they are optimal. 
+        Result: Objective metric, subcomponent size, number of subcomponents.
+        Variables: Different optimization functions
+        Note: Copy of h3e5a, but now with a gene cost.
+        a:es_nn
+DATE EXECUTED: 2024-02-28 12:17:05.262101
+EXECUTION TIME: 0.0 hour(s) 10.0 minute(s) 41.66 second(s).
+MODEL GIT VERSION: 7d02fa046797a9491c79af5257c04211a5fbbff2

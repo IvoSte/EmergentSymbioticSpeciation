@@ -1,0 +1,101 @@
+MODEL = "predator_prey"
+
+# Runner settings
+N_RUNS = 1             # Run the model repeatedly to get an average result
+N_GENERATIONS = 500
+N_COMPOSITIONS = 100   # Number of parameters to run the model with, this limits the population size.
+RUNS_PER_SET = 3       # Number of runs per parameter set, to averge the results.
+RUN_BENCHMARK = true
+BENCHMARK_INTERVAL = 5 # Run the benchmark every x generations
+
+
+# Model behaviour / default model input parameter
+# Agents
+N_AGENTS = 3                               # The number of agents that need chromosomes, which are the predators  
+N_PREDATORS = 3                            # Not used if sampling is set to "deterministic"
+N_PREY = 1
+MLP_PREDATORS = true
+PREY_BEHAVIOUR = "flee_from_closest_noise" # Possible values: 'move_erratic', 'move_uniform_right', 'stand_still', 'flee_from_all', 'flee_from_closest'
+
+# Environment
+TOROIDAL_SPACE = true
+MAX_TICKS = 150
+
+PREDATOR_RANDOM_SPAWN = false
+PREY_RANDOM_SPAWN = true
+PREDATOR_RESPAWN_ON_KILL = false
+PREY_RESPAWN_ON_DEATH = true
+MODEL_STOP_ON_KILL = true
+
+# Chromosome parameters
+N_SUBPOPULATIONS = 1                 #, "A", "A"]
+SUBPOPULATION_SIZE = 150             # Remember: this value is limited by the number of parameters
+CHROMOSOME_LENGTH = 22               # This is set to 22 because the MLP has 22 weights. Adjust it if you change the MLP.
+CHROMOSOME_SAMPLING = "evolutionary" # Possible values: "uniform", "deterministic", "simple_random". Determines how chromosomes are sampled for new parameter sets. Deterministic should be used if there are fixed number of species and their sizes remain the same.
+
+
+# Model dev / Viewer
+SCREEN_SIZE_X = 500
+SCREEN_SIZE_Y = 500
+VIEW_BEHAVIOUR_RUN = false         # Single run to show chromosome behaviour
+RUN_WITH_VIEWER = false
+HELPER_OVERLAY = false
+FRAMES_PER_SECOND = 15
+MULTITHREADING = false
+SAVE_CHROMOSOMES = false
+VISUALIZE_CHROMOSOMES = false
+VISUALIZE_CHROMOSOMES_INTERVAL = 5
+
+
+# Evolution parameters
+COLLECTIVE_FITNESS_WEIGHT = 0.0
+COLLECTIVE_FITNESS_TYPE = "distance_to_prey_positive" #Possible values: "collective_kills", "distance_to_prey"
+INDIVIDUAL_FITNESS_TYPE = "distance_to_prey_positive" #Possible values: "individual_kills", "distance_to_prey", "distance_to_prey_greedy"
+SCALE_FITNESS_WITH_REPRESENTATION = true
+ALIGN_COMPOSITIONS_WITH_POPULATION = true
+
+
+EVOLUTION_TYPE = "emergent_subpopulations" #Possible values: "forced_subpopulations", "emergent_subpopulationss", "emergent_subpopulations"
+
+DETECT_SPECIES_METHOD = "dbscan"               #Possible values: "dbscan", "kmeans", "optics"
+DETECT_SPECIES_WITH_PREVIOUS_GENERATION = true # Use the previous generation to detect species. This is useful if you want to keep the same species between generations.
+DETECT_SPECIES_INTERVAL = 5                    # KMeans requires a value for K. We can determine this value by calculating the best fit for K. We don't want to do this each generation.
+DETECT_SPECIES_DELTA_RANGE = 1                 # Detecting the value for K needs a range. This is how many we detect around the previously used K.
+DETECT_SPECIES_EPS = 0.5                       # DBSCAN and OPTICS require a value for epsilon. 
+DETECT_SPECIES_MIN_SAMPLES = 1                 # DBSCAN and OPTICS require a value for min_samples.
+
+SPECIES_TRACKING = true
+SPECIES_TRACKING_SEARCH_DEPTH = 5
+SPECIES_TRACKING_DISTANCE_THRESHOLD = 0.5
+SPECIES_TRACKING_PROTOTYPE_METHOD = "centroid" # Possible values: "centroid", unimplemented: "mediod", "density_peak"
+
+[AGENT]
+REPRODUCE_FRACTION = 0.5
+CULL_FRACTION = 0.5
+MUTATION_PROBABILITY = 0.045
+MUTATION_RANGE = 0.1
+SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "tournament", "rank"
+
+MATE_SELECTION_TYPE = "nearest_neighbour" #Possible values: "random", "random_fitness_proportional", "nearest_neighbour", "approx_nearest_neighbour"
+MATE_SELECTION_SAMPLE_SIZE = 50           # Number of individuals to sample from when selecting a mate. Usefull if MATE_SELECTION_TYPE is "nearest_neighbour_from_sample", to limit approx nearest neighbour search time.
+ALLOW_SELF_MATING = false                 # Allow an individual to mate with itself. This is useful if you want to allow for mutation only.
+
+GENE_DATA_TYPE = "continuous" # possible values: "binary", "nominal", "continuous"
+
+KNOCKOUT_MUTATION = false
+KNOCKOUT_MUTATION_PROBABILITY = 0.0
+INITIAL_GENE_KNOCKOUT = 0           # Number of genes to knock out initially. For a random number per chromosome set to -1. Only used if KNOCKOUT_MUTATION is true.
+
+[COMPOSITION]
+REPRODUCE_FRACTION = 0.5
+CULL_FRACTION = 1.0                     # Needs to be 1.0, as the set of allowed genes changes each generation. (different species)
+MUTATION_PROBABILITY = 0.1
+MUTATION_RANGE = 0.1
+SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "tournament", "rank"
+
+CHROMOSOME_RESIZING = false           # Allow the number of chromosomes in the composition to change. Can only be applied for composition if there are variable number of slots.
+CHROMOSOME_RESIZING_PROBABILITY = 0.1 # Probability of resizing a chromosome. Only applied if CHROMOSOME_RESIZING is true.
+
+MATE_SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "nearest_neighbour", "approx_nearest_neighbour"
+MATE_SELECTION_SAMPLE_SIZE = 0               # Number of individuals to sample from when selecting a mate. Usefull if MATE_SELECTION_TYPE is "nearest_neighbour_from_sample", to limit approx nearest neighbour search time.
+ALLOW_SELF_MATING = true                     # Allow an individual to mate with itself. This is useful if you want to allow for mutation only.

@@ -1,0 +1,6 @@
+EXPERIMENT: experiments/predator_prey/parameter_testing_species_detection_tracking
+DATE CREATED: 2023-10-12 12:25:12.120597
+NOTE: PP parameter testing - species detection tracking
+DATE EXECUTED: 2023-10-12 14:15:34.439922
+EXECUTION TIME: 1.0 hour(s) 51.0 minute(s) 36.66 second(s).
+MODEL GIT VERSION: a8cff8f67082edc21af23da0b6a45bda931c4924

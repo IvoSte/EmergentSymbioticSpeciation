@@ -1,0 +1,12 @@
+EXPERIMENT: experiments/function_optimization/hyp_2_exp_23a
+DATE CREATED: 2023-11-27 12:51:39.943983
+NOTE: 
+        Test if individuals form a complete solution, where each species serves as a subcomponent.
+        Objective metric, subcomponent size, number of subcomponents.
+        Four classic optimization functions.
+        Function model with es_nn | forced subpopulations | rs_fp
+        a:es_nn, b:rs_fp, c:fs
+        
+DATE EXECUTED: 2023-11-27 12:15:38.976894
+EXECUTION TIME: 0.0 hour(s) 19.0 minute(s) 27.79 second(s).
+MODEL GIT VERSION: 2d3c0ede26129c81173db2ec00e32215cd447fdf

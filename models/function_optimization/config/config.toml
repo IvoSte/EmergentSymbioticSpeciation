@@ -1,0 +1,13 @@
+# Runner
+N_RUNS = 10
+N_GENERATIONS = 100
+
+# Model
+FUNCTION_NAME = "Sum" # possible values: "Sum" "Sphere", "Rastrigin", "Ackley", "Schwefel", "Griewank"
+MAX_STEPS = 1
+N_AGENTS = 2
+
+# Agent
+N_GENES = 1
+MAX_VALUE = 100
+MIN_VALUE = -100

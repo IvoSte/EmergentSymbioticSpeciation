@@ -1,0 +1,11 @@
+EXPERIMENT: experiments\toxin\hypothesis_2_experiment_18b
+DATE CREATED: 2023-11-09 16:39:43.371383
+NOTE: 
+        Test if individuals form a complete solution, where each species serves as a subcomponent.
+        Objective metric, subcomponent size, number of subcomponents.
+        Function model with es_nn | forced subpopulations | rs_fp with 1 toxin.
+        b:rs_fp
+        
+DATE EXECUTED: 2023-11-09 17:03:12.616422
+EXECUTION TIME: 0.0 hour(s) 1.0 minute(s) 45.3 second(s).
+MODEL GIT VERSION: 2679acd4fb0551960c63d35dfda02ac5d66c1ea3

@@ -1,0 +1,12 @@
+EXPERIMENT: experiments/function_optimization/hyp_3_exp_4b
+DATE CREATED: 2023-11-29 14:13:08.226145
+NOTE: 
+        Objective: Test if individuals form a complete solution, and if they are optimal. 
+        Result: Objective metric, subcomponent size, number of subcomponents.
+        Variables: Different optimization functions
+        Note: Same as hyp 3 e 4, but now more runs, and not all functions.
+        a:es_nn, b:rs_fp, c:fs
+        
+DATE EXECUTED: 2023-11-30 09:25:55.385768
+EXECUTION TIME: 0.0 hour(s) 34.0 minute(s) 44.12 second(s).
+MODEL GIT VERSION: 6bfdca34de3202266a9a823bf3d69a0c0945018a

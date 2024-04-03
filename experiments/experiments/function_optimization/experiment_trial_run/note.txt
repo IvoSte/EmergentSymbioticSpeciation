@@ -1,0 +1,6 @@
+EXPERIMENT: experiments\function_optimization\experiment_trial_run
+DATE CREATED: 2023-10-06 14:27:30.749693
+NOTE: Optimization Function Trial Run
+DATE EXECUTED: 2023-10-09 12:04:55.397438
+EXECUTION TIME: 0.0 hour(s) 2.0 minute(s) 15.41 second(s).
+MODEL GIT VERSION: 0cc41eb7965c0ee89ac37a60748fbe11fb07de42

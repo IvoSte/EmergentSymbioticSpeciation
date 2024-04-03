@@ -1,0 +1,9 @@
+EXPERIMENT: experiments\toxin\hyp_3_exp_1c
+DATE CREATED: 2023-11-28 14:56:26.878011
+NOTE: 
+        Objective: Test if the found composition is optimal.
+        Result: Metric of solvedness (toxin level), toxin redundancy, distribution of functions.
+        Variables: Cost multiplier, evolution types
+        Note: Second run, with collective fitness type average.
+        a:es_nn, b:rs_fp, c:fs
+        

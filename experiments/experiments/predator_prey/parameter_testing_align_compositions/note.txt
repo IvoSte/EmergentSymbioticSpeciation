@@ -1,0 +1,6 @@
+EXPERIMENT: experiments\predator_prey\parameter_testing_align_compositions
+DATE CREATED: 2023-10-09 15:21:19.043068
+NOTE: PP parameter testing - align compositions with population
+DATE EXECUTED: 2023-10-09 15:45:28.873458
+EXECUTION TIME: 0.0 hour(s) 23.0 minute(s) 45.98 second(s).
+MODEL GIT VERSION: 66eee31570596951b9c49768461c3044f55cde0e

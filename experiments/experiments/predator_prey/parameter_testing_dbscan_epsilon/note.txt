@@ -1,0 +1,6 @@
+EXPERIMENT: experiments\predator_prey\parameter_testing_dbscan_epsilon
+DATE CREATED: 2023-10-09 13:15:01.796070
+NOTE: PP parameter testing - dbscan epsilon
+DATE EXECUTED: 2023-10-09 13:49:43.383042
+EXECUTION TIME: 0.0 hour(s) 33.0 minute(s) 33.56 second(s).
+MODEL GIT VERSION: 0cc41eb7965c0ee89ac37a60748fbe11fb07de42

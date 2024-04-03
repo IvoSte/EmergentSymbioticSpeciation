@@ -1,0 +1,11 @@
+EXPERIMENT: experiments\predator_prey\hypothesis_1_experiment_9
+DATE CREATED: 2023-10-31 12:59:38.431585
+NOTE: 
+        Test if we can have stable multiple species over time, with and without evolutionary sampling, with and without nn mate selection.
+        This test nr 5 uses strict evolution parameters, ramping up the pressure, in the hopes of achieving more stable/consistent/less ambigious results.
+        Testing progeresively more eps value for dbscan, and changing the evolutionary params a bit. Move from really strict to lenient.
+        Goal is to find a parameter where we get multiple stable species for ev sampling and nn, and single species for random sampling and fp mate selection.
+        
+DATE EXECUTED: 2023-10-31 13:40:21.732180
+EXECUTION TIME: 0.0 hour(s) 38.0 minute(s) 1.6 second(s).
+MODEL GIT VERSION: 54687db5ff035c6f4390f08870fdad0f01d23f5d

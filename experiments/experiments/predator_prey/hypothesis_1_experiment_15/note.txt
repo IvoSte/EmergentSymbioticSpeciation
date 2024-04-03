@@ -1,0 +1,9 @@
+EXPERIMENT: experiments\predator_prey\hypothesis_1_experiment_15
+DATE CREATED: 2023-11-02 09:38:31.612439
+NOTE: 
+        Test if we can have stable multiple species over time, with and without evolutionary sampling, with and without nn mate selection.
+        Check if it still works with no composition alignment and fitness scaling.
+        
+DATE EXECUTED: 2023-11-07 10:53:48.636107
+EXECUTION TIME: 1.0 hour(s) 1.0 minute(s) 8.94 second(s).
+MODEL GIT VERSION: 54687db5ff035c6f4390f08870fdad0f01d23f5d

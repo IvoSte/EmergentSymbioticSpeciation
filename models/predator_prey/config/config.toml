@@ -1,0 +1,62 @@
+# Program settings
+VIEW_BEHAVIOUR_RUN = false
+
+# Model structure
+SCREEN_SIZE_X = 500
+SCREEN_SIZE_Y = 500
+
+# Model behaviour / default model input parameter
+N_PREDATORS = 3                       # Not used if sampling is set to "deterministic"
+N_PREY = 1
+TOROIDAL_SPACE = true
+PREY_BEHAVIOUR = "flee_from_closest"  # Possible values: 'move_erratic', 'move_uniform_right', 'stand_still', 'flee_from_all', 'flee_from_closest', 'flee_from_closest_noise'
+MLP_PREDATORS = true
+MAX_TICKS = 150
+PREDATOR_TYPES = [1]                  #, "A", "A"]
+CHROMOSOMES_PER_TYPE = 30             # Remember: this value is limited by the number of parameters
+CHROMOSOME_LENGTH = 22                # This is set to 22 because the MLP has 22 weights. Adjust it if you change the MLP.
+CHROMOSOME_SAMPLING = "simple_random" # Possible values: "uniform", "deterministic", "simple_random". Determines how chromosomes are sampled for new parameter sets. Deterministic should be used if there are fixed number of species and their sizes remain the same.
+
+PREDATOR_RANDOM_SPAWN = false
+PREY_RANDOM_SPAWN = true
+PREDATOR_RESPAWN_ON_KILL = false
+PREY_RESPAWN_ON_DEATH = true
+MODEL_STOP_ON_KILL = true
+
+# Model dev
+RUN_WITH_VIEWER = true
+HELPER_OVERLAY = true
+FRAMES_PER_SECOND = 15
+MULTITHREADING = false
+N_COMPOSITIONS = 30                # Number of parameters to run the model with, this limits the population size.
+RUNS_PER_SET = 2                   # Number of runs per parameter set, to averge the results.
+GENERATIONS = 25
+RUN_BENCHMARK = true
+BENCHMARK_INTERVAL = 5             # Run the benchmark every x generations
+SAVE_CHROMOSOMES = true
+VISUALIZE_CHROMOSOMES = true
+VISUALIZE_CHROMOSOMES_INTERVAL = 5
+
+
+# Evolution parameters
+REPRODUCE_FRACTION = 1.0
+CULL_FRACTION = 0.5
+MUTATION_PROBABILITY = 0.1
+MUTATION_RANGE = 0.1
+SELECTION_TYPE = "fitness_proportional" #Possible values: "random", "fitness_proportional", "tournament", "rank"
+
+COLLECTIVE_FITNESS_WEIGHT = 0.5
+COLLECTIVE_FITNESS_TYPE = "distance_to_prey" #Possible values: "collective_kills", "distance_to_prey"
+INDIVIDUAL_FITNESS_TYPE = "distance_to_prey" #Possible values: "individual_kills", "distance_to_prey", "distance_to_prey_greedy"
+
+MATE_SELECTION_TYPE = "nearest_neighbour" #Possible values: "random", "random_fitness_proportional", "nearest_neighbour", "approx_nearest_neighbour"
+MATE_SELECTION_SAMPLE_SIZE = 15           # Number of individuals to sample from when selecting a mate. Usefull if MATE_SELECTION_TYPE is "nearest_neighbour_from_sample", to limit approx nearest neighbour search time.
+ALLOW_SELF_MATING = false                 # Allow an individual to mate with itself. This is useful if you want to allow for mutation only.
+
+EVOLUTION_TYPE = "emergent_subpopulations" #Possible values: "forced_subpopulations",  "emergent_subpopulations"
+
+DETECT_SPECIES_METHOD = "dbscan" #Possible values: "dbscan", "kmeans", "optics"
+DETECT_SPECIES_INTERVAL = 5      # KMeans requires a value for K. We can determine this value by calculating the best fit for K. We don't want to do this each generation.
+DETECT_SPECIES_DELTA_RANGE = 1   # Detecting the value for K needs a range. This is how many we detect around the previously used K.
+DETECT_SPECIES_EPS = 0.25        # DBSCAN and OPTICS require a value for epsilon. 
+DETECT_SPECIES_MIN_SAMPLES = 1   # DBSCAN and OPTICS require a value for min_samples.

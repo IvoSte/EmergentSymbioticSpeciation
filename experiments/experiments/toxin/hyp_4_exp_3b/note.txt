@@ -1,0 +1,13 @@
+EXPERIMENT: experiments/toxin/hyp_4_exp_3b
+DATE CREATED: 2023-11-29 15:09:40.657929
+NOTE: 
+        Objective: Show the effects of fitness scaling and other collective fitness metrics.
+        Result: |Average fitness, fitness per species|, |species per composition, species per generation, species representation|, |Toxin concentration|
+        Variables: Sampling (evolutionary vs random), cfw (0, 1), fitness scaling (t,f), cf type (toxin remainder, average)
+        Note: These are the first 'core results' showed to Grossi. Very short, deterministic, clear results that exhibit the game theory dynamics.
+                Attempt 3 with very few generations, for a zoomed in look.
+        a:es_nn, b:rs_fp
+        
+DATE EXECUTED: 2023-11-30 11:03:49.701071
+EXECUTION TIME: 0.0 hour(s) 0.0 minute(s) 21.74 second(s).
+MODEL GIT VERSION: b5dd635449d4b52f519bc6ca84e21e61f681192a

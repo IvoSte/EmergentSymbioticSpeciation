@@ -1,0 +1,11 @@
+EXPERIMENT: experiments\predator_prey\hyp_4_exp_7
+DATE CREATED: 2024-02-19 18:08:22.619898
+NOTE: 
+        Objective: What is wrong with only collective fitness without fitness scaling?
+        Result: Benchmark, species composition, species fitness
+        Variables: cfw, fitness scaling
+        Note: Late experiment, to definitively test and see why collective fitness alone does not work in the speciation model.
+        
+DATE EXECUTED: 2024-02-19 20:14:55.099827
+EXECUTION TIME: 2.0 hour(s) 6.0 minute(s) 15.42 second(s).
+MODEL GIT VERSION: b5dd635449d4b52f519bc6ca84e21e61f681192a

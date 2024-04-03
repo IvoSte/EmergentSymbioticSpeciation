@@ -1,0 +1,9 @@
+EXPERIMENT: experiments\predator_prey\hypothesis_1_experiment_7
+DATE CREATED: 2023-10-30 15:52:45.139757
+NOTE: 
+        Test if we can have stable multiple species over time, with and without evolutionary sampling, with and without nn mate selection.
+        This test nr 5 uses strict evolution parameters, ramping up the pressure, in the hopes of achieving more stable/consistent/less ambigious results.
+        
+DATE EXECUTED: 2023-10-31 08:43:26.946140
+EXECUTION TIME: 0.0 hour(s) 37.0 minute(s) 2.69 second(s).
+MODEL GIT VERSION: 54687db5ff035c6f4390f08870fdad0f01d23f5d

@@ -1,0 +1,10 @@
+EXPERIMENT: experiments\toxin\hypothesis_2_experiment_17
+DATE CREATED: 2023-11-09 15:17:46.198926
+NOTE: 
+        Test if individuals form a complete solution, where each species serves as a subcomponent.
+        Show toxin levels, gene redundancy, and species composition.
+        Toxin model with emergent subpopulationsl, evolutionary compositions and nn mate selection, with the same toxin base as the other runs.
+        
+DATE EXECUTED: 2023-11-09 15:53:10.930774
+EXECUTION TIME: 0.0 hour(s) 9.0 minute(s) 44.48 second(s).
+MODEL GIT VERSION: 2679acd4fb0551960c63d35dfda02ac5d66c1ea3

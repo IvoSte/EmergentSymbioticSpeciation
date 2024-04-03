@@ -1,0 +1,10 @@
+EXPERIMENT: experiments\toxin\hypothesis_2_experiment_14
+DATE CREATED: 2023-11-09 12:52:14.360868
+NOTE: 
+        Test if individuals form a complete solution, where each species serves as a subcomponent.
+        Show toxin levels, gene redundancy, and species composition.
+        Toxin model with forced subpopulations.
+        
+DATE EXECUTED: 2023-11-09 13:00:03.115269
+EXECUTION TIME: 0.0 hour(s) 7.0 minute(s) 29.33 second(s).
+MODEL GIT VERSION: 2679acd4fb0551960c63d35dfda02ac5d66c1ea3

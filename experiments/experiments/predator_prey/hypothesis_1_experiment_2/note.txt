@@ -1,0 +1,3 @@
+EXPERIMENT: experiments/predator_prey/hypothesis_1_experiment_2
+DATE CREATED: 2023-10-23 15:10:39.392590
+NOTE: Test if we can have stable multiple species over time, with and without evolutionary sampling, with and without nn mate selection.
